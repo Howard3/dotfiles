@@ -5,3 +5,5 @@ if status is-interactive
     alias nvim="~/.local/bin/nvim.appimage"
     # Commands to run in interactive sessions can go here
 end
+
+abbr -a ccd chezmoi cd
