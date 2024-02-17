@@ -3,6 +3,7 @@ if status is-interactive
     fish_add_path /usr/local/go/bin
     fish_add_path ~/go/bin/
     alias nvim="~/.local/bin/nvim.appimage"
+    alias cat="batcat"
     # Commands to run in interactive sessions can go here
 end
 
