@@ -4,16 +4,19 @@ if status is-interactive
     fish_add_path ~/go/bin/
     alias nvim="~/.local/bin/nvim.appimage"
     # Commands to run in interactive sessions can go here
+    alias bat="cat"
+    function cat
+        if type -q batcat
+            batcat $argv
+        else if type -q bat
+            bat $argv
+        else
+            echo "Warning: batcat is not installed, using standard cat."
+            command cat $argv
+        end
+    end
 end
 
 abbr -a ccd chezmoi cd
 
-function cat
-    if type -q batcat
-        batcat $argv
-    else
-        echo "Warning: batcat is not installed, using standard cat."
-        command cat $argv
-    end
-end
 
