@@ -22,6 +22,7 @@ lsp.ensure_installed({
     'sqlls',
     'marksman',
     'jsonls',
+    'templ',
 })
 
 local cmp = require('cmp')
@@ -58,6 +59,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
 
 -- more file type associations
 vim.api.nvim_command('au BufRead,BufNewFile *.jsonl set filetype=json')
+vim.filetype.add({ extension = { templ = "templ" } })
 
 -- go-specific modifications, enable snippets
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -68,3 +70,4 @@ require('lspconfig').gopls.setup{
 }
 
 lsp.setup()
+
