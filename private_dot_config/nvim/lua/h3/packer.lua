@@ -114,6 +114,9 @@ return require('packer').startup(function(use)
       branch = "main"
   }
 
+  -- mini / helper modules
+  use { 'echasnovski/mini.nvim', version = '*' }
+
   -- csv
   use {
       'cameron-wags/rainbow_csv.nvim',
@@ -162,6 +165,11 @@ return require('packer').startup(function(use)
 
   use 'nvim-pack/nvim-spectre'
 
+  -- outlines
+  use {
+        "hedyhli/outline.nvim",
+  }
+
   -- comments
   use 'folke/todo-comments.nvim'
 
@@ -170,6 +178,7 @@ return require('packer').startup(function(use)
   use 'bluz71/vim-nightfly-guicolors'
   use 'scottmckendry/cyberdream.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
+  use { "scottmckendry/cyberdream.nvim" }
 
   -- better syntax highlighting
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -184,8 +193,10 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
+
+  -- kitty highlighting
+  use "fladson/vim-kitty"
+
+  -- AI
+  use 'yetone/avante.nvim'
 end)
-
-
-
-

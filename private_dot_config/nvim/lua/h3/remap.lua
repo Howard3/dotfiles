@@ -38,3 +38,6 @@ vim.api.nvim_set_keymap('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', 
 
 -- rest
 vim.api.nvim_set_keymap('n', '<leader>rest', '<Plug>RestNvim<CR>', {noremap=true})
+
+-- outline
+vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle outline" })
