@@ -114,6 +114,9 @@ return require('packer').startup(function(use)
       branch = "main"
   }
 
+  -- elixir
+  use({ "elixir-tools/elixir-tools.nvim", tag = "stable", requires = { "nvim-lua/plenary.nvim" }})
+
   -- mini / helper modules
   use { 'echasnovski/mini.nvim', version = '*' }
 
@@ -138,9 +141,6 @@ return require('packer').startup(function(use)
           'rfc_semicolon'
       }
   }
-
-  -- rest
-  use "rest-nvim/rest.nvim"
 
   -- indent guides
   use "lukas-reineke/indent-blankline.nvim"
@@ -198,5 +198,12 @@ return require('packer').startup(function(use)
   use "fladson/vim-kitty"
 
   -- AI
-  use 'yetone/avante.nvim'
+  -- use 'yetone/avante.nvim'
+  --
+  use {
+    "luukvbaal/nnn.nvim",
+    config = function()
+      require("nnn").setup()
+    end
+  }
 end)
