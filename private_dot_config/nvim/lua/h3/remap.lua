@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>", {silent = true, noremap = true})
 
 -- Use Ctrl + Arrow keys to navigate between panes
 vim.api.nvim_set_keymap('n', '<C-Left>', '<C-w>h', { noremap = true })

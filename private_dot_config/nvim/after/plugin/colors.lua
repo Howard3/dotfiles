@@ -2,6 +2,7 @@ function ColorMyPencils(color)
 	color = color or "nightfly"
 	color = color or "catppuccin"
     color = color or "cyberdream"
+    color = color or "synthwave84"
 
 	vim.cmd.colorscheme(color)
 
@@ -90,5 +91,18 @@ require("cyberdream").setup({
     },
 })
 
+require("synthwave84").setup({
+  glow = {
+    error_msg = true,
+    type2 = true,
+    func = true,
+    keyword = true,
+    operator = false,
+    buffer_current_target = true,
+    buffer_visible_target = true,
+    buffer_inactive_target = true,
+  }
+})
+
 -- setup must be called before loading
-vim.cmd.colorscheme "cyberdream"
+vim.cmd.colorscheme "synthwave84"
